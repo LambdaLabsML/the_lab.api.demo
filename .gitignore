@@ -1,0 +1,32 @@
+# The Lab (generated data)
+.the_lab/
+.claude/
+.mcp.json
+PROMPT.md
+.the_lab.agentid
+
+# Python / venv / caches
+__pycache__/
+*.pyc
+.venv/
+hf_cache/
+
+# Logs (anywhere in the tree — per-run dirs, top-level, etc.)
+*.log
+logs/
+
+# Tetris game outputs (per-run JSON, GIFs, thinking logs)
+tetris_results*.json
+tetris_replay*.gif
+tetris_thinking*.log
+tetris_profile.gif
+tetris_warmup.gif
+
+# Per-run sweep output directories under runs/ — keep runs/run_all.sh
+# and any other orchestration scripts directly under runs/.
+runs/*/
+
+# Secrets
+secret.key
+*.secret
+/.claude

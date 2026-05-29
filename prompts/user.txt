@@ -1,0 +1,1 @@
+Plan the full placement of the current piece as an ordered list of inputs (max $MAX_MOVES_PER_CALL$). Use $ACTION_COMMIT$ to lock the current piece and optionally keep planning for the NEXT piece.$PIECE_LINE$$BOARD_BLOCK$$HEIGHTS_LINE$$NEAR_FULL_LINE$$CARRYOVER_BLOCK$$LATENCY_LINE$

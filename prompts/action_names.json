@@ -1,0 +1,8 @@
+{
+  "LEFT":      "LEFT",
+  "RIGHT":     "RIGHT",
+  "ROT_LEFT":  "ROT_LEFT",
+  "ROT_RIGHT": "ROT_RIGHT",
+  "WAIT":      "disabled",
+  "COMMIT":    "HARD_DROP"
+}
