@@ -1,0 +1,20 @@
+# Fallback regex applied to the model's reasoning trace when no valid tool call
+# is returned. Group 1 must capture one action name per match; re.findall
+# extracts all matches in order to reconstruct the intended move sequence.
+# Use the internal action names (LEFT, RIGHT, ROT_RIGHT, ROT_LEFT, COMMIT, WAIT)
+# OR the current display names from action_names.json — both are accepted.
+#
+# fallback= is the internal action name returned when the pattern finds nothing.
+
+# Matches a single action OR a comma/space-separated list of actions.
+# Group 1 captures the full match; the code splits it on [,\s]+ automatically.
+# Examples matched:
+#   LEFT
+#   LEFT, RIGHT, HARD_DROP
+#   DOWN_LEFT DOWN_LEFT ROT_RIGHT HARD_DROP
+#   [ROT_RIGHT, LEFT, LEFT, HARD_DROP]
+pattern=((?:[A-Z_]+,\s*)*[A-Z_]+)
+fallback=WAIT
+# mode=last  → use only the final match (model's final decision, default)
+# mode=all   → concatenate all matches in order
+mode=last
